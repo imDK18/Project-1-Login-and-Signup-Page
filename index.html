@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+
+        <!-----Login Form ------>
+        <form id="login" class="form active">
+          <h2>Login</h2>
+          <input type="email" id="loginEmail" placeholder="&#9993; : Email" required />
+          <div class="password-container">
+            <input type="password" id="loginPassword" placeholder="&#xf084; : Password" required style="font-family: Poppins, FontAwesome"/>
+            <span toggle="#togglePassword" class="eye-toggle" id="toggleLoginPassword">
+              <i class="far fa-eye"></i>
+              <i class="far fa-eye-slash"></i>
+            </span>
+          </div>
+          <div class="options">
+            <div class="remember-me">
+              <input type="checkbox" id="rememberMe">
+              <label for="rememberMe">Remember Me</label>
+            </div>
+            <a href="#" id="forgotPassword">Forgot Password?</a>
+          </div>
+          <button type="submit">Login</button>
+          <p> Don't have an account? <a href="#" id="switchToSignup">Sign Up</a></p>
+        </form>
+
+        <!-----Signup Form ------>
+        <form id="signup" class="form">
+          <h2>Sign Up</h2>
+          <input type="text" id="signupName" placeholder="&#xf007; : Username" required style="font-family: Poppins, FontAwesome"/>
+          <input type="email" id="signupEmail" placeholder="&#9993; : Email" required />
+          <div class="password-container">
+            <input type="password" id="signupPassword" placeholder="&#xf084; : Password" required style="font-family: Poppins, FontAwesome"/>
+            <span toggle="#signupPassword" class="eye-toggle" id="toggleSignupPassword">
+              <i class="far fa-eye"></i>
+              <i class="far fa-eye-slash"></i>
+            </span>
+          </div>
+          <button type="submit">Sign Up</button>
+          <p>
+            Already have an account? <a href="#" id="switchToLogin">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
